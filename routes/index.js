@@ -1,6 +1,6 @@
 var express = require('express')
     , router = express.Router()
-    , reachmail = require('../libs/WebAPISamples/nodejs/reachmailapi.js')
+    , reachmail = require('../libs/reachmailapi.js')
     , api = new reachmail({token: 'v2IhI1xX5KcIuX9yUkJ2DWDmetsDVBsLimJUHwx10Ebpw4oueh0i1PKNbAIax7A2'})
     , casual = require('casual')
     , async = require('async')
