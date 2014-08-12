@@ -20,10 +20,7 @@ app.controller('commonCtrl', ['$scope', '$rootScope', 'Server',
 //                if (http_code == 200)
                     console.log('response = ', response)
             },{username:window.username, APIKEY:window.APIKEY})
-
-
         }
-
     }
 ]);
 
