@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+div{
+    float:left;
+    margin:10px;
+}
+
+p{
+    height:25px;
+}
+
+button{
+    float:right;
+}

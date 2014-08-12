@@ -2,3 +2,31 @@ extends layout
 block content
   h1= title
   p List was created  ----->>>>>>>>>> "#{list}"
+  div(ng-controller='commonCtrl')
+      form
+          div
+              p
+                label Account key
+              p
+                label Login
+              p
+                label Password
+              p
+                label Phone
+
+          div
+              p
+                input(name = 'accountKey', ng-model='accountKey')
+              p
+                input(name = 'login',ng-model='login')
+              p
+                input(type='password', name = 'password', ng-model='password')
+              p
+                input(name = 'phone', ng-model='phone')
+              p
+                button(ng-click = 'checkAccount()') OK
+
+
+
+
+

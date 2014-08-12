@@ -35,13 +35,10 @@ router.get('/', function(req, res){
                         })
                     })
                 })
-
             }
         )
     });
-
 })
-
 
 var merchAPIHelper = {
     emails : []
