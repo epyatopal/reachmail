@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
+var pg = require('pg');
+var conString = "postgres://root:root@localhost:3000/reachmail";
+var client = new pg.Client(conString);
+client.connect();
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

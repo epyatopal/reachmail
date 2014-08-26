@@ -1,20 +1,22 @@
 var express = require('express');
 var router = express.Router();
-var accountSid = 'AC764b26b8ce37703247a8a64ac09db6f1';
-var authToken = "d54ca891cb8ae368a2c3701ed3165ad7";
+var accountSid = 'AC58b6ca6384edacd2d4f4aabfe90f8cd9';
+var authToken = "7af911c6880975740ebee37af4c5f66a";
+var numberPhone = "+18477363872"
 var client = require('twilio')(accountSid, authToken);
 
-/* GET users listing. */
-router.get('/', function(req, res) {
+
+router.post('/', function(req, res) {
+    console.log('params = ', req.query)
 
     client.calls.create({
         url: "https://demo.twilio.com/welcome/voice/",
-        to: "+14843094265",
-        from: "+79885865058"
+        to: "+18477363872",
+        from: numberPhone
     }, function(err, call) {
         console.log('error=  ', err)
         console.log('call = ', call)
-//        res.send(call.sid);
+        res.send(call);
     });
 });
 
