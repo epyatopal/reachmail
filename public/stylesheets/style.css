@@ -108,4 +108,16 @@ input{
 
 .p{
     padding: 10px;
+    color: white;
+}
+
+.alert{
+    color: #b94a48;
+}
+
+form{
+    width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 5px;
 }

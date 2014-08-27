@@ -36,5 +36,8 @@
 </div>
 <div class="modal-footer" ng-if="showDetails">
     <button class="btn btn-success" ng-click="ok(formLogin)">LOGIN</button>
+    <div class="alert" ng-show="isError">
+        Your account key, username or password is invalid
+    </div>
 </div>
 </form>

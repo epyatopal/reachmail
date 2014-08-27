@@ -6,6 +6,11 @@ var express = require('express')
 //    , async = require('async')
 //    , _ = require('underscore');
 
+router.get('/success', function(req, res){
+    console.log('HERE')
+    res.render('success');
+})
+
 router.get('/', function(req, res){
     res.render('index');
 //    api.get('/administration/users/current', function (http_code, response) {

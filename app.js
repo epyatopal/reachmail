@@ -5,15 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
-var pg = require('pg');
-var conString = "postgres://root:root@localhost:3000/reachmail";
-var client = new pg.Client(conString);
-client.connect();
+var config = require('config')
+
 
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var twilio = require('./routes/twilio');
+var db = require('./routes/db');
+var reachmail = require('./routes/reachmail');
 
 
 var app = express();
@@ -32,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/twilio', twilio);
+app.use('/db', db);
+app.use('/reachmail', reachmail);
 
 
 /// catch 404 and forward to error handler

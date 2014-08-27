@@ -6,7 +6,8 @@ var app = angular.module('myApp', [
     'ui.bootstrap',
     'ngRoute',
     'controllers',
-    'services'
+    'services',
+    'angular-md5'
 
 ]);
 

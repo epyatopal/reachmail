@@ -3,35 +3,35 @@ extends layout
 block content
     header
         h1
-    p.p
-        button.btn.btn-success(ng-click = 'checkAccount()') Login
+    p.p(ng-show='!showMain') Data is successfully saved
+    //    button.btn.btn-success(ng-click = 'checkAccount()') Login
 
 
-  //div
-  //
-  //    div.page-header Login
-  //    form
-  //        div
-  //            p
-  //              label Account key
-  //            p
-  //              label Login
-  //            p
-  //              label Password
-  //            p
-  //              label Phone
-  //
-  //        div
-  //            p
-  //              input(name = 'accountKey', ng-model='accountKey')
-  //            p
-  //              input(name = 'login',ng-model='login')
-  //            p
-  //              input(type='password', name = 'password', ng-model='password')
-  //            p
-  //              input(name = 'phone', ng-model='phone')
-  //            p
-  //              button(ng-click = 'checkAccount()') OK
+    form(name='formLogin', ng-show='showMain')
+        .modal-header {{heading}}
+        .modal-body(style='text-align: center;', ng-if='showLogin')
+                .labelForName
+                    label.label_in_modal Account ID
+                .inputForName
+                    input#accountID(type='text', ng-change='changeAccount(accountID)', ng-model='accountID', required='required')
+                .labelForName
+                    label.label_in_modal Username
+                .inputForName
+                    input#username(type='text', ng-change='changeUsername(username)', ng-model='username', required='required')
+                .nameOfElement
+                    .labelForName
+                        label.label_in_modal Password
+                    .inputForName
+                        input#password(type='password', ng-change='changePassword(password)', ng-model='password', required='required')
+                .nameOfElement
+                    .labelForName
+                        label.label_in_modal Phone
+                    .inputForName
+                        input#phone(type='text', ng-change='changePhone(phone)', ng-model='phone', required='required')
+        .modal-footer(ng-if='showDetails')
+                button.btn.btn-success(ng-click='ok(formLogin)') LOGIN
+                .alert(ng-show='isError', ng-model='errorMessage')
+
 
 
 
