@@ -7,13 +7,7 @@ appServices.factory('Server', ['$http', '$rootScope',
                 , method = method || 'GET'
                 , params = params || null
                 , data = data || {};
-//            $http.defaults.useXDomain = true;
             $http({url: url, method: method, params: params, data: data
-//                    ,headers:{
-//                    'Access-Control-Allow-Origin': '*',
-//                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-//                    'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
-//                },withCredentials: true
             }).success(function (res) {
                     cb(null, res)
                 }).error(function (err) {

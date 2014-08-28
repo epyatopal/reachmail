@@ -4,7 +4,6 @@ block content
     header
         h1
     p.p(ng-show='!showMain') Data is successfully saved
-    //    button.btn.btn-success(ng-click = 'checkAccount()') Login
 
 
     form(name='formLogin', ng-show='showMain')
@@ -27,13 +26,13 @@ block content
                     .labelForName
                         label.label_in_modal Phone
                     .inputForName
-                        input#phone(type='text', ng-change='changePhone(phone)', ng-model='phone', required='required')
+                        input#phone(type='text', ng-change='changePhone(phone)', name="phone", ng-model='phone',ng-pattern='/^[+]{0,1}[0-9]{0,1}[-\s\.]{0,1}[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/',  required='required')
         .modal-footer(ng-if='showDetails')
-                button.btn.btn-success(ng-click='ok(formLogin)') LOGIN
-                .alert(ng-show='isError', ng-model='errorMessage')
+                button.btn.btn-success(ng-click='ok(formLogin)', ng-disabled="isDisabled") LOGIN
+                .alert(ng-show='isError') {{errorMessage}}
 
 
 
 
-
+//
 

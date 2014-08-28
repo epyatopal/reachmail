@@ -113,6 +113,7 @@ input{
 
 .alert{
     color: #b94a48;
+    float:left;
 }
 
 form{

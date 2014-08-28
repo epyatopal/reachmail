@@ -19,7 +19,7 @@ router.post('/', function(req, res) {
         }
     };
     var callback = function(response) {
-            console.log('get response = ', response.statusCode);
+            c
         if(response.statusCode == 200)
             res.send({success: true})
         else

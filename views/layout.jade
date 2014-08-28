@@ -5,7 +5,6 @@ html(ng-app="myApp")
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='bower_components/jqueryui/themes/ui-lightness/jquery-ui.min.css')
-    //script(type='text/javascript', src="/js/require.js")
     script(type='text/javascript', src='/bower_components/angular/angular.js')
     script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
     script(type='text/javascript', src='bower_components/jqueryui/jquery-ui.min.js')
@@ -16,17 +15,11 @@ html(ng-app="myApp")
     script(type="text/javascript", src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js")
     script(type="text/javascript", src="/bower_components/angular-md5/angular-md5.min.js")
     script(type="text/javascript", src="bower_components/bootstrap/dist/js/bootstrap.min.js")
-
     script(type='text/javascript', src='/js/app.js')
     script(type='text/javascript', src='/js/controllers/commonCtrl.js')
     script(type='text/javascript', src='/js/service.js')
-    script(type='text/javascript', src='/js/modal.js')
 
-
-    script window.accountSid = 'AC58b6ca6384edacd2d4f4aabfe90f8cd9'
-    script window.authToken = "7af911c6880975740ebee37af4c5f66a"
-    script window.numberPhone = "+18477363872"
-    script window.conString = "postgres://root:root@localhost/reachmail"
+    script window.host = "http://localhost:3000"
 
     script(type='text/ng-template', id='/modal.html')
 
